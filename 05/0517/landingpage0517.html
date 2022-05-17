@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/0d80c14f2f.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      padding: 20px 0;
+      color: #4e62c1;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 30px;
+    }
+
+    /* banner  */
+    .banner {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      
+      padding: 0 10%;
+      background: linear-gradient(to top, #4e62c1, #4998dc );
+      color: #fff;
+    }
+
+    .banner__text-box {
+      width: 300px;
+      align-self: center;
+    }
+
+    .banner__text-box p {
+      margin: 20px 0;
+    }
+
+    .banner__iphone-img {
+      align-self: end;
+      width: 300px;
+    }
+    
+    .banner__iphone-img img {
+      width: 100%;
+      display: block;
+    }
+    .more-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background: #444445;
+      color: #fff;
+    }
+
+    /* aside */
+    .portpolio-link {
+      text-align: center;
+      padding: 50px 0;
+    }
+    .portpolio-link p {
+      margin: 10px 0 20px;
+    }
+
+    /* service */
+    .service {
+      width: 100%;
+      background-color: #4e62c1;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+    }
+    .service strong {
+      display: block;
+      margin: 20px 0;
+    }
+    .service__list {
+      display: flex;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: auto;
+    }
+    .service__item {
+      width: 25%;
+      padding: 16px;
+    }
+    .service__item i {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #4e62c1;
+      font-size: 32px;
+      line-height: 80px;
+    }
+    .service__item h3 {
+      margin: 10px 0;
+    }
+    /* portpolio */
+    .portpolio {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 50px 0;
+    }
+    .portpolio strong {
+      display: block;
+      margin: 10px 0 40px;
+    }
+    .portpolio__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .portpolio__item {
+      position: relative;
+      width: 50%;
+      height: 300px;
+      color: #fff;
+      padding: 80px 50px 0;
+      text-align: left;
+    }
+    .portpolio__item--effect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 85%;
+      height: 85%;
+      border: 0px solid #fff;
+      transition: .3s;
+    }
+    .portpolio__item:hover .portpolio__item--effect {
+      border: 10px solid #fff;
+    }
+    .portpolio__item p {
+      margin-top: 30px;
+      line-height: 20px;
+    }
+    .portpolio__item:nth-child(1){
+      background: url(images/portfolio-1.jpeg) no-repeat center;
+      background-size: cover;
+    }
+    .portpolio__item:nth-child(2){
+      background: url(images/portfolio-2.jpeg) no-repeat center;
+      background-size: cover;
+    }
+    .portpolio__item:nth-child(3){
+      background: url(images/portfolio-3.jpeg) no-repeat center;
+      background-size: cover;
+    }
+    .portpolio__item:nth-child(4){
+      background: url(images/portfolio-4.jpeg) no-repeat center;
+      background-size: cover;
+    }
+    footer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 32px;
+    }
+    footer .sns {
+      margin-bottom: 20px;
+    }
+    footer i {
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #4e62c1;
+      text-align: center;
+      padding-top: 8px;
+      color: #fff;
+    }
+    @media screen and (max-width:900px) {
+      .service__list {
+        flex-wrap: wrap;
+      }
+      .service__item {
+        width: 50%;
+      }
+      .portpolio__item {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width:768px) {
+      .banner {
+        flex-direction: column;
+        padding: 50px 10% 0;
+      }
+      .banner__text-box {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .banner__iphone-img {
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Logo</h1>
+    <nav>
+      <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+      </ul>
+    </nav>
+  </header>
+  <section class="banner">
+    <div class="banner__text-box">
+      <h2>Landing Page for Apps</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur quae hic quia excepturi enim eum laboriosam! Saepe, fugiat dolor.
+      </p>
+      <button class="more-btn">Show more</button>
+    </div>
+    <div class="banner__iphone-img">
+      <img  src="images/iphone.png" alt="">
+    </div>
+  </section>
+  <aside class="portpolio-link">
+    <h2>It is the perfect theme for your Project!</h2>
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+    <button class="more-btn">Show project</button>
+  </aside>
+  <section class="service">
+    <h2>SERVICE</h2>
+    <strong>What We Offer</strong>
+    <div class="service__list">
+      <a class="service__item">
+        <i class="fa-solid fa-bolt-lightning"></i>
+        <h3>Responsive</h3>
+        <span>Lorem ipsum dolor sit. lorem</span>
+      </a>
+      <a class="service__item">
+        <i class="fa-solid fa-bolt-lightning"></i>
+        <h3>Responsive</h3>
+        <span>Lorem ipsum dolor sit. lorem</span>
+      </a>
+      <a class="service__item">
+        <i class="fa-solid fa-bolt-lightning"></i>
+        <h3>Responsive</h3>
+        <span>Lorem ipsum dolor sit. lorem</span>
+      </a>
+      <a class="service__item">
+        <i class="fa-solid fa-bolt-lightning"></i>
+        <h3>Responsive</h3>
+        <span>Lorem ipsum dolor sit. lorem</span>
+      </a>
+    </div>
+  </section>
+  <section class="portpolio">
+    <h2>Portpolio</h2>
+    <strong>What we can Do</strong>
+    <div class="portpolio__list">
+      <a href="#" class="portpolio__item">
+        <h4>Stationary</h4>
+        <p>Lorem ipsum dolor sit amet consectetur<br>adipisicing elit.</p>
+        <div class="portpolio__item--effect"></div>
+      </a>
+      <a href="#" class="portpolio__item">
+        <h4>Stationary</h4>
+        <p>Lorem ipsum dolor sit amet consectetur<br>adipisicing elit.</p>
+        <div class="portpolio__item--effect"></div>
+      </a>
+      <a href="#" class="portpolio__item">
+        <h4>Stationary</h4>
+        <p>Lorem ipsum dolor sit amet consectetur<br>adipisicing elit.</p>
+        <div class="portpolio__item--effect"></div>
+      </a>
+      <a href="#" class="portpolio__item">
+        <h4>Stationary</h4>
+        <p>Lorem ipsum dolor sit amet consectetur<br>adipisicing elit.</p>
+        <div class="portpolio__item--effect"></div>
+      </a>
+    </div>
+  </section>
+  <footer>
+    <div class="sns">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+    <div class="copyright">&copy copyright</div>
+  </footer>
+</body>
+</html>
