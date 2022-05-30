@@ -1,0 +1,29 @@
+//space 
+$space-large: 30px;
+$space-medium: 20px;
+$space-base: 15px;
+$space-small: 10px;
+
+//font-size
+
+$font-base: 16px;
+$font-small: 14px;
+$font-micro: 10px;
+
+.container {
+  width: 100%;
+  padding: 0 $space-base;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+
+@media screen and (min-width:1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+

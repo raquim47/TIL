@@ -1,0 +1,37 @@
+@media screen and (min-width:768px) {
+  .container {
+    max-width: 720px;
+  }
+  .top-bar {
+    display: block;
+    padding: $space-small 0;
+    background-color: #fef7f6;
+    font-size: 8px;
+    text-transform: uppercase;
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__contact,
+    &__txt-right {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    &__contact span {
+      padding-right: $space-base;
+    }
+
+    &__txt-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__txt-right a {
+      padding-left: $space-base;
+    }
+  }
+}
