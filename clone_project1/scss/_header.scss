@@ -1,0 +1,137 @@
+.top-bar {
+  display: none;
+}
+
+// NOTE: flex 부모 안에 자식 정렬방법 1
+// 한쪽 마진 : auto, 반대편 마진 : '숫자'
+// -> 반대편에서 '숫자'만큼 떨어짐 (포지션 속성과 유사)
+
+// -- 헤더 네비게이션 영역 --
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: $space-base 0;
+}
+// -- 네비게이션 > 아이콘 영역 --
+.nav__icons {
+  display: flex;
+
+  // NOTE: flex부모 안에 자식 요소 정렬 방법 2
+  // 요소의 클릭영역을 넓혀주기 위해 부여한 padding값을 조정
+  // 해당 실습에서는 padding-bottom만 0을 줘서 왼쪽 로고와 수평이 되도록 했다. 
+  
+  a {
+    position: relative;
+    padding: $space-small;
+    padding-bottom: 0;
+  }
+
+  a:not(:first-of-type)::before {
+    content: attr(data-num);
+    position: absolute;
+    background-color: #ff5353;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center
+  }
+  a:last-of-type::before {
+    content: attr(data-num);
+  }
+
+  i {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+#nav-btn {
+  display: none;
+}
+
+.site-nav-btn {
+  margin-left: auto;
+  margin-right: 0;
+  font-size: 18px;
+  padding: $space-small;
+  padding-bottom: 0;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    color: $color-red;
+  }
+}
+
+#nav-btn:checked ~ .site-nav {
+  height: 365px;
+}
+// NOTE: 라벨을 클릭했을 때 높이가 0에서 365px
+// 드랍다운 애니메이션으로 구현
+// Q: 높이를 지정하지 않고 애니메이션 효과를 줄 수 있는 방법?
+
+
+// -- 네비게이션 영역 > 사이트 네비게이션 / 모바일에선 드랍메뉴 --
+
+.site-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  transition: .5s;
+  box-shadow: 1px 4px 5px #ccc;
+
+  &__item {
+    position: relative;
+  }
+
+  &__item-menu{
+    display: flex;
+    align-items: center;
+    padding: $space-medium $space-base;
+    font-size: $font-small;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    i {
+      color: $color-dgray;
+      font-size: $font-micro;
+      padding-top: 2px;
+      margin-left: $space-small;
+    }
+  }
+
+  .site-nav__sub {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 1px 4px 5px #ccc;
+    transition: .3s;
+    z-index: 10;
+  
+    a {
+      display: block;
+      padding: $space-base;
+      background-color: #fff;
+    }
+  }
+}
+
+

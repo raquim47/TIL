@@ -1,0 +1,52 @@
+
+@media screen and (min-width:1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  // header 
+  .nav {
+    padding: 0;
+  }
+
+  .site-nav-btn {
+    display: none;
+  }
+  
+  .site-nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    box-shadow: none;
+    overflow: visible;
+
+    &__item-menu {
+      display: block;
+      padding: $space-large $space-base;
+    }
+
+    &__item:hover &__sub {
+      opacity: 1;
+      visibility: visible;
+    } 
+  }
+  
+  // banner
+
+  .banner h2 {
+    font-size: 58px;
+  }
+
+  // journal
+
+  .journal__tags {
+    flex-direction: row;
+  }
+
+  // follow
+
+  .follow__item {
+    width: 25%;
+  }
+}

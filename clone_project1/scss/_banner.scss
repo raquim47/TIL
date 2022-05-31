@@ -1,0 +1,41 @@
+.banner {
+  background: url(../img/bg-1.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.banner__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 $space-base;
+}
+.banner__img,
+.banner__txtbox {
+  width: 100%;
+}
+.banner__txtbox {
+  padding: $space-large*2 0;
+}
+// desktop 화면 폭이 넓어질 때 텍스트 영역을 오른쪽으로 정렬할 용도
+.banner__txt {
+  text-align: center;
+
+  strong {
+    margin: 0;
+    font-size: $font-small;
+    letter-spacing: 2px;
+    color: $color-gray;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-bottom: $space-large;
+    font-size: $font-large;
+    font-weight: 500;
+  }
+
+  button {
+    background-color: $color-red;
+    transition: .4s;
+  }
+}

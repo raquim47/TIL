@@ -1,0 +1,91 @@
+@media screen and (min-width:768px) {
+  // 공통 container
+  .container {
+    max-width: 720px;
+  }
+  // 공통 음수 마진 -> ul > li에 전부 좌우 패딩값을 부여했기 때문에 헤더 또는 다른 영역의 여백과 동일하게 구현하기 위함.  
+  .feat-product__list,
+  .journal__list,
+  .follow__list {
+    margin-left: -$space-base;
+    margin-right: -$space-base;
+  }
+  //header
+
+  .top-bar {
+    display: block;
+    padding: $space-small 0;
+    background-color: #fef7f6;
+    font-size: 8px;
+    text-transform: uppercase;
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__contact,
+    &__txt-right {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    &__contact span {
+      padding-right: $space-base;
+    }
+
+    &__txt-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__txt-right a {
+      padding-left: $space-base;
+    }
+    
+  }
+  // banner
+  .banner__img,
+  .banner__txtbox {
+    max-width: 50%;
+  }
+  .banner__img {
+    order: 1;
+  }
+  .banner__txtbox {
+    align-self: center;
+    order: 0;
+    padding: 0;
+  }
+  .banner__txt {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  //section.journal
+
+  .journal__item {
+    width: 33.33%;
+    padding: 0 $space-base;
+  }
+  .journal__tags {
+    flex-direction: column;
+  }
+
+  //section.follow
+
+  .follow__item {
+    width: 50%;
+    padding: 0 $space-base;
+  }
+
+  //footer 
+
+  .footer__list {
+    width: 33.33%;
+    text-align: center;
+  }
+  
+}

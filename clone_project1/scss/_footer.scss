@@ -1,0 +1,33 @@
+.footer {
+  background-color: #e9e2d8;
+  padding-top: $space-large*2;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    padding-bottom: $space-medium;
+  }
+
+  &__list li {
+    margin-bottom: $space-small;
+    font-size: $font-small;
+    color: $color-gray;
+  }
+
+  &__list h4 {
+    margin-bottom: $space-medium;
+  }
+  
+}
+
+.copyright {
+  width: 100%;
+  border-top: 1px solid $color-gray;
+  padding: $space-medium;
+  font-size: $font-small;
+  text-align: center;
+  color: $color-gray;
+}

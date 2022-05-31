@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  padding: 0 $space-base;
+  margin: 0 auto;
+}
+
+a {
+  transition: .3s;
+
+  &:hover {
+    color: $color-red;
+  }
+}
+
+.default-btn {
+  display: inline-block;
+  min-width: 170px;
+  padding: $space-medium $space-medium + 5;
+  border-radius: 3px;
+  color: #fff;
+  font-size: $font-small;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+.default-btn:hover {
+  background-color: #fff;
+  color: $color-dgray;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.1);
+}

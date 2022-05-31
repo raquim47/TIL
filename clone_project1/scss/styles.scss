@@ -1,0 +1,18 @@
+//root
+@import './root';
+
+// variables
+@import './variables';
+
+// header, footer
+@import './header';
+@import './footer';
+
+// content
+@import './banner';
+@import './product';
+
+// responsive
+@import './tablet';
+@import './desktop';
+
