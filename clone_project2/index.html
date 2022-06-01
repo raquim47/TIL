@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/0d80c14f2f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- header -- start -->
+  <header>
+    <div class="header-wrap container">
+      <h1 class="logo">
+        <a href="#">Tour<span>.</span></a>
+      </h1>
+      <!-- 네비게이션바 / 모바일에선 사이드 숨김->버튼 -->
+      <input type="checkbox" id="nav-btn">
+      <label for="nav-btn" class="nav-btn">
+        <span class="hide">menu button</span>
+      </label>
+      <label for="nav-btn" class="dim">
+        <span class="hide">dim</span>
+      </label>
+      <!-- NOTE : label을 두개 만들고 싶지 않으면 네비버튼(nav-btn)을 absolute로 띄워야한다  -->
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">Dropdown<i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="sidebar__sub">
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Services<i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="sidebar__sub">
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">About<i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="sidebar__sub">
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Contact Us<i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="sidebar__sub">
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- <main>
+    <div class="container">
+      <section class="search">
+        <h2 class="search__intro">
+          <p class="fixed">
+            Let's Enjoy Your<br>
+            Trip In <span class="typed">Paris.</span>
+          </p>
+        </h2>
+        <div class="search__form">
+          <form>
+            <select name="country" class="search__form-control">
+              <option value="Destination">Destination</option>
+              <option value="Korea">Korea</option>
+              <option value="Japan">Japan</option>
+              <option value="Brazil">Brazil</option>
+            </select>
+            <input type="text" class="search__form-control" name="date" placeholder="06/01/2022 - 06/01/2022">
+            <input type="submit" class="btn" value="Search">
+            <label for="chk">
+              <span class="chk__caption">Save this search</span>
+              <input type="checkbox" id="search-chk" checked="checked">
+              <a href="#" class="chk__indicator"><i class="fa-solid fa-check"></i></a>
+            </label>
+            input
+          </form>
+        </div>
+        <div class="search__img">
+
+        </div>
+      </section>
+    </div>
+  </main> -->
+</body>
+</html>
